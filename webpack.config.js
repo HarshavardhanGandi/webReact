@@ -35,9 +35,9 @@ const svgLoaderConfiguration = {
   ],
 };
 const imageLoaderConfiguration = {
-  test: /\\\\.(gif|jpe?g|png)$/,
+  test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
   use: {
-    loader: 'file-loader',
+    loader: 'url-loader',
     options: {
       name: '[name].[ext]',
     },

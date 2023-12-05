@@ -17,6 +17,10 @@ import W3Image from './assets/img/login.png';
 import offerxLogo from './assets/img/offerx-logo.png';
 import MicrosoftImg from './assets/img/Microsoft.png';
 import GoogleImg from './assets/img/Google.png';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
@@ -111,6 +115,14 @@ const App = () => {
                     <Text style={globalStyles.link}>and Cookies policies.</Text>
                   </Pressable>
                 </Text>
+
+                <Pressable
+                  style={globalStyles.registerBtn}
+                  onPress={() => console.log('Pressed!')}>
+                  <Text style={globalStyles.registerText}>
+                    Don't have account? Register
+                  </Text>
+                </Pressable>
               </View>
             </View>
           </View>
